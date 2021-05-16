@@ -1,0 +1,25 @@
+{
+  "name": "w08l01_mongodb-and-mongoose",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohammadShoman/MongoDB-and-Mongoose.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MohammadShoman/MongoDB-and-Mongoose/issues"
+  },
+  "homepage": "https://github.com/MohammadShoman/MongoDB-and-Mongoose#readme"
+}
