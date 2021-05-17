@@ -53,7 +53,7 @@ app.post("/create/todo", (req, res) => {
 });
 
 //-----------------------------------------------------//
-
+//Q5
 app.put("/update/todo", (req, res) => {
   const { task, description, deadline, isCompleted, priority } = req.body;
 
@@ -68,7 +68,19 @@ app.put("/update/todo", (req, res) => {
 });
 
 //-----------------------------------------------------//
-app.delete("/delete/todo", (req, res) => {});
+//Q6
+app.delete("/delete/todo", (req, res) => {
+  const { task, description, deadline, isCompleted, priority } = req.body;
+
+  todoModel
+    .deleteOne({ task })
+    .then((result) => {
+      res.json("deleted");
+    })
+    .catch((err) => {
+      res.json(err);
+    });
+});
 //-----------------------------------------------------//
 const port = 3000;
 app.listen(port, () => {
