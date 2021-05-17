@@ -5,9 +5,16 @@ const db = require("./db");
 const app = express();
 app.use(express.json());
 
-
-
-app.get("/todos", (req, res) => {});
+app.get("/todos", (req, res) => {
+  todoModel
+    .find({})
+    .then((result) => {
+      res.json(result);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
+});
 //-----------------------------------------------------//
 //Q1
 app.post("/create/todo", (req, res) => {
