@@ -4,10 +4,23 @@ const db = require("./db");
 
 const app = express();
 app.use(express.json());
-
+//-----------------------------------------------------//
+//Q3
 app.get("/todos", (req, res) => {
   todoModel
     .find({})
+    .then((result) => {
+      res.json(result);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
+});
+//-----------------------------------------------------//
+//Q4
+app.get("/completed/todos", (req, res) => {
+  todoModel
+    .find({isCompleted:true})
     .then((result) => {
       res.json(result);
     })
